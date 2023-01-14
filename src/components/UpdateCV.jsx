@@ -10,6 +10,7 @@ const UpdateCV = () => {
   const [file, setFile] = useState("");
   const [percent, setPercent] = useState(0);
   const [handleFileName, setHandleFileName] = useState(0);
+  const [psswd, setPassword] = useState(null);
 
   const upload = () => {
     if (!file) {
@@ -18,6 +19,14 @@ const UpdateCV = () => {
     }
     if (file.name != "CV.pdf") {
       setHandleFileName(1);
+      return;
+    }
+    if(!psswd){
+      alert('Please enter password')
+      return
+    }
+    if (psswd != import.meta.env.VITE_PASSWD) {
+      alert("Wrong Password");
       return;
     }
     const storageRef = ref(storage, `/resume/${file.name}`);
@@ -33,7 +42,7 @@ const UpdateCV = () => {
         setInterval(() => {
           localStorage.removeItem("addproject");
           navigate("/");
-        }, 10000);
+        }, 5000);
       },
       (err) => console.log(err),
       () => {
@@ -53,10 +62,19 @@ const UpdateCV = () => {
         }}
         accept="application/pdf"
       />
+      <input
+          className="file-psswd"
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={psswd}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
       {handleFileName == 1 ? (
         <h6>File name must be of CV.pdf</h6>
       ) : handleFileName == 2 ? (
-        <h6>Please upload an PDF first!</h6>
+        <h6>Please upload a PDF first!</h6>
       ) : handleFileName == 3 ? (
         <h6>Uploaded</h6>
       ) : (
@@ -84,6 +102,16 @@ const Container = styled.div`
   input {
     margin-bottom: 20px;
     border: 2px solid white;
+  }
+  .file-psswd{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    outline: none;
+    background: var(--form-bg);
+    border: none;
+    color: var(--white);
   }
   button {
     padding: 10px 15px;
