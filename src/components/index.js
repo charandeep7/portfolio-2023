@@ -1,0 +1,8 @@
+export {default as Header} from './Header'
+export {default as Home} from './Home'
+export {default as AboutME} from './AboutME'
+export {default as Projects} from './Projects'
+export {default as Connect} from './Connect'
+export {default as AddProject} from './AddProject'
+export {default as Footer} from './Footer'
+export {default as UpdateCV} from './UpdateCV'

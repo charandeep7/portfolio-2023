@@ -1,0 +1,1 @@
+window.env = {psswd: "Kitish@6865"};
