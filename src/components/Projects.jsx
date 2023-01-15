@@ -24,14 +24,13 @@ const Projects = () => {
         <p>{desc}</p>
         <ButtonGroup>
           {isHosted ? (
-            <a href={livelink} target="_blank">
+            <a href={livelink} key={desc} target="_blank">
               <ViewBtn>View Live</ViewBtn>
             </a>
           ) : (
             <Disabled disabled>View Live</Disabled>
           )}
-
-          <a href={gitlink} target="_blank">
+          <a href={gitlink} key={imglink} target="_blank">
             <GithubBtn>Github Repo</GithubBtn>
           </a>
         </ButtonGroup>
@@ -77,13 +76,13 @@ const Projects = () => {
                 e.desc,
                 e.alt,
                 e.livelink,
-                e.getlink,
+                e.gitlink,
                 e.isHosted
               )
             )}
         </Cards>
       </Zoom>
-      <Anchor to="/addproject">
+      <Anchor to="/addproject" key="1">
         <AddProject>Add Projects</AddProject>
       </Anchor>
     </Wrapper>
@@ -164,8 +163,6 @@ const Card = styled.div`
     border-radius: 5px;
     margin-bottom: 5px;
   }
-  h1 {
-  }
   p {
     overflow: hidden;
     margin-bottom: 10px;
@@ -204,6 +201,7 @@ const ViewBtn = styled.button`
   @media (max-width: 950px) {
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 10px;
   }
 `;
 
