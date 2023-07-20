@@ -45,14 +45,13 @@ const Home = () => {
     <Container id="home">
       <Wrapper>
         <Fade direction="up">
-          <Bounce delay={"4s"}>
             <Contents>
               <h2>Hello, i'm</h2>
               <h1 onClick={() => setAlter(!alter)}>
                 {alter ? "Charandeep Kumar" : `Kitish 😎`}
               </h1>
               <Desc>
-                Fullstack developer & Coder. B.Tech 2nd Year IIIT Lucknow
+                Fullstack developer & Coder. B.Tech 3rd Year IIIT Lucknow
                 Students. Having interest in coding and exploring new
                 technologies.
               </Desc>
@@ -69,18 +68,15 @@ const Home = () => {
                 </Anchor>
                 <Anchor2>
                   <CVBtn onClick={download} value="download">
-                    Download CV
+                    Resume
                   </CVBtn>
                 </Anchor2>
               </ButtonGroup>
             </Contents>
-          </Bounce>
         </Fade>
-        <Bounce delay={"4s"}>
           <Fade direction="up">
             <Image src={me} alt="" />
           </Fade>
-        </Bounce>
       </Wrapper>
 
       <AboutME />

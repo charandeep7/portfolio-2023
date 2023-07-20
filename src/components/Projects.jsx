@@ -52,7 +52,6 @@ const Projects = () => {
   return (
     <Wrapper id="project">
       <Fade direction="up">
-        <Bounce delay={"3s"}>
           <Title>Featured Projects</Title>
           <Description>
             I have made many small and big project in last few years. So, Guys
@@ -63,10 +62,8 @@ const Projects = () => {
             but i'd love to work together.
           </Description>
           <SubTitle>Project</SubTitle>
-        </Bounce>
       </Fade>
 
-      <Zoom>
         <Cards>
           {list &&
             list.map((e) =>
@@ -81,7 +78,6 @@ const Projects = () => {
               )
             )}
         </Cards>
-      </Zoom>
       <Anchor to="/addproject" key="1">
         <AddProject>Add Projects</AddProject>
       </Anchor>

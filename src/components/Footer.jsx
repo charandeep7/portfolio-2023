@@ -19,11 +19,11 @@ const Footer = () => {
       </AttentionSeeker>
       <NavLinks>
         {createLinks("https://leetcode.com/_kitish/", "Leetcode")}
-        {createLinks("https://codeforces.com/profile/_kitish", "Codeforces")}
+        {createLinks("https://codeforces.com/profile/extended_euclidean", "Codeforces")}
         {createLinks("https://www.codechef.com/users/kitish2003", "Codechef")}
         {createLinks(
-          "https://stackoverflow.com/users/17808268/kitish",
-          "Stackoverflow"
+          "https://atcoder.jp/users/charandeep",
+          "Atcoder"
         )}
       </NavLinks>
       <Ending>Designed by @me</Ending>
