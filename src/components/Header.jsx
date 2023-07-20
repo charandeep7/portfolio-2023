@@ -62,8 +62,8 @@ const Header = () => {
 export default Header;
 
 const Nav = styled.nav`
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  position: relative;
   top: 0;
 
   height: 70px;
