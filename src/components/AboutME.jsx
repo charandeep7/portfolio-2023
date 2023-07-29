@@ -34,9 +34,10 @@ const AboutME = () => {
         Hey, My name is Charandeep Kumar (Kitish). I'm currently studying in Indian Institute of Information Technology, Lucknow. I'm in 3rd year B.Tech IT Branch. I've great interset in the solving algothimic problem and developing websites. Recently, I've started studying about react native to develop app. I also love travelling.
         I don't have any fixed and final plan for future but i just want to be a great Engineer.
         <SubTitle>Few Achievements: </SubTitle>
-          <li>3★ on Codechef (mxRating: 1627)</li>
-          <li>Pupil on Codeforces (mxRating: 1394)</li>
+          <li>Specialist on Codeforces (mxRating: 1394)</li>
           <li>LeetCode Rating: 1855</li>
+          <li>3★ on Codechef (mxRating: 1627)</li>
+          <li>Atcoder Rating: 622</li>
           <li>2nd Winner in Fresher's Cup</li>
       </Description>
       <SubTitle>Knows</SubTitle>
